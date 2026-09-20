@@ -9,15 +9,16 @@ import { Activity } from 'lucide-react';
 
 function App() {
   const [activeTab, setActiveTab] = React.useState('dashboard');
+  const [selectedLocation, setSelectedLocation] = React.useState({ lat: 30.7352, lng: 79.0669 });
 
   const renderPage = () => {
     switch (activeTab) {
-      case 'dashboard': return <Dashboard />;
-      case 'map': return <RiskMap />;
+      case 'dashboard': return <Dashboard selectedLocation={selectedLocation} />;
+      case 'map': return <RiskMap selectedLocation={selectedLocation} onLocationSelect={setSelectedLocation} />;
       case 'alerts': return <Alerts />;
       case 'analytics': return <Analytics />;
       case 'system': return <System />;
-      default: return <Dashboard />;
+      default: return <Dashboard selectedLocation={selectedLocation} />;
     }
   };
 

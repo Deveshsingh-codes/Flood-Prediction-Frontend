@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   MapContainer,
   TileLayer,
@@ -34,10 +34,12 @@ const MapClickHandler: React.FC<MapClickHandlerProps> = ({
   return null;
 };
 
-export const RiskMap: React.FC = () => {
-  const [selectedLocation, setSelectedLocation] =
-    useState<SelectedLocation | null>(null);
+export interface RiskMapProps {
+  selectedLocation: SelectedLocation;
+  onLocationSelect: (location: SelectedLocation) => void;
+}
 
+export const RiskMap: React.FC<RiskMapProps> = ({ selectedLocation, onLocationSelect }) => {
   const getRiskColor = (level: string) => {
     switch (level) {
       case 'LOW':
@@ -87,7 +89,7 @@ export const RiskMap: React.FC = () => {
 
           {/* Detect clicks anywhere on the map */}
           <MapClickHandler
-            onLocationSelect={setSelectedLocation}
+            onLocationSelect={onLocationSelect}
           />
 
           {/* Existing monitored areas */}
