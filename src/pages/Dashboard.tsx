@@ -9,8 +9,8 @@ export const Dashboard: React.FC = () => {
 
   return (
     <div>
-      <h2 className="page-title">Real-Time Risk Overview</h2>
-      
+      <h2 className="page-title">Real-Time Risk Parameters</h2>
+
       <div className="dashboard-grid">
         <div className="dashboard-left">
           {/* Main Risk Card */}
@@ -24,12 +24,12 @@ export const Dashboard: React.FC = () => {
               </div>
               <RiskBadge level={currentArea.riskData.level} />
             </div>
-            
+
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.5rem', marginBottom: '1rem' }}>
               <span style={{ fontSize: '3rem', fontWeight: 'bold', lineHeight: 1 }}>{currentArea.riskData.score}</span>
               <span style={{ color: 'var(--text-muted)' }}>/ 100 Risk Score</span>
             </div>
-            
+
             <div style={{ padding: '0.75rem', backgroundColor: 'rgba(0,0,0,0.2)', borderRadius: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
               <Clock size={16} color="var(--primary)" />
               <div>
@@ -55,27 +55,27 @@ export const Dashboard: React.FC = () => {
           <div className="card">
             <h3 className="card-title">Environmental Metrics</h3>
             <div className="metrics-grid">
-              <MetricCard 
-                label="Rainfall" 
-                value={currentArea.metrics.rainfall.value} 
+              <MetricCard
+                label="Rainfall"
+                value={currentArea.metrics.rainfall.value}
                 unit={currentArea.metrics.rainfall.unit}
                 description={currentArea.metrics.rainfall.description}
               />
-              <MetricCard 
-                label="Soil Moisture" 
-                value={currentArea.metrics.soilMoisture.value} 
+              <MetricCard
+                label="Soil Moisture"
+                value={currentArea.metrics.soilMoisture.value}
                 unit={currentArea.metrics.soilMoisture.unit}
                 description={currentArea.metrics.soilMoisture.description}
               />
-              <MetricCard 
-                label="Water Level" 
-                value={currentArea.metrics.waterLevel.value} 
+              <MetricCard
+                label="Water Level"
+                value={currentArea.metrics.waterLevel.value}
                 unit={currentArea.metrics.waterLevel.unit}
                 description={currentArea.metrics.waterLevel.description}
               />
-              <MetricCard 
-                label="Terrain/Slope" 
-                value={currentArea.metrics.slope.value} 
+              <MetricCard
+                label="Terrain/Slope"
+                value={currentArea.metrics.slope.value}
                 unit={currentArea.metrics.slope.unit}
                 description={currentArea.metrics.slope.description}
               />

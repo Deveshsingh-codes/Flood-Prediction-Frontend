@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigation } from './components/Navigation';
-import { Dashboard } from './pages/Dashboard'; 
+import { Dashboard } from './pages/Dashboard';
 import { RiskMap } from './pages/RiskMap';
 import { Alerts } from './pages/Alerts';
 import { Analytics } from './pages/Analytics';
@@ -24,12 +24,12 @@ function App() {
   return (
     <div className="app-container">
       <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
-      
+
       <main className="main-content">
         <header className="topbar">
           <div className="location-info">
             <span style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Monitoring Region:</span>
-            <span style={{ marginLeft: '0.5rem', fontWeight: 500 }}>North District & Surrounding</span>
+            <span style={{ marginLeft: '0.5rem', fontWeight: 500 }}>Uttarakhand,India</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
@@ -41,7 +41,7 @@ function App() {
             </div>
           </div>
         </header>
-        
+
         <div className="page-content">
           {renderPage()}
         </div>

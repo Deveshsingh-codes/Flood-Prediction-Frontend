@@ -6,7 +6,7 @@
   --primary: #0ea5e9;
   --primary-hover: #0284c7;
   --primary-light: #e0f2fe;
-  
+
   --risk-low: #10b981;
   --risk-moderate: #f59e0b;
   --risk-high: #f97316;
@@ -25,7 +25,17 @@
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: var(--bg-main);
+
+  background:
+    linear-gradient(rgba(248, 250, 252, 0.25),
+      rgba(248, 250, 252, 0.25)),
+    url('/flood-rescue.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
   color: var(--text-main);
   line-height: 1.5;
 }
@@ -100,7 +110,8 @@ body {
   font-weight: 500;
 }
 
-.nav-item:hover, .nav-item.active {
+.nav-item:hover,
+.nav-item.active {
   color: var(--primary-hover);
   background-color: var(--primary-light);
   border-right: 3px solid var(--primary);
@@ -145,10 +156,11 @@ body {
 }
 
 .page-title {
-  font-size: 1.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
-  color: var(--text-main);
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
 }
 
 /* Dashboard Grid */
@@ -159,7 +171,8 @@ body {
   height: 100%;
 }
 
-.dashboard-left, .dashboard-right {
+.dashboard-left,
+.dashboard-right {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -221,12 +234,26 @@ body {
 }
 
 /* Risk colors */
-.risk-low { color: var(--risk-low); }
-.risk-moderate { color: var(--risk-moderate); }
-.risk-high { color: var(--risk-high); }
-.risk-critical { color: var(--risk-critical); }
+.risk-low {
+  color: var(--risk-low);
+}
 
-.bg-risk-high { background-color: #fff7ed; border-color: #fed7aa; }
+.risk-moderate {
+  color: var(--risk-moderate);
+}
+
+.risk-high {
+  color: var(--risk-high);
+}
+
+.risk-critical {
+  color: var(--risk-critical);
+}
+
+.bg-risk-high {
+  background-color: #fff7ed;
+  border-color: #fed7aa;
+}
 
 /* Badges */
 .badge {
@@ -282,7 +309,8 @@ body {
   border-collapse: collapse;
 }
 
-.data-table th, .data-table td {
+.data-table th,
+.data-table td {
   padding: 0.75rem 1rem;
   text-align: left;
   border-bottom: 1px solid var(--border);
@@ -306,9 +334,18 @@ body {
   border-radius: 50%;
   display: inline-block;
 }
-.status-online { background-color: var(--risk-low); }
-.status-delayed { background-color: var(--risk-moderate); }
-.status-offline { background-color: var(--text-muted); }
+
+.status-online {
+  background-color: var(--risk-low);
+}
+
+.status-delayed {
+  background-color: var(--risk-moderate);
+}
+
+.status-offline {
+  background-color: var(--text-muted);
+}
 
 /* Analytics grid */
 .analytics-grid {

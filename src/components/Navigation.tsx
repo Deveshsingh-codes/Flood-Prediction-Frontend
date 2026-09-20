@@ -18,8 +18,8 @@ export const Navigation: React.FC<NavigationProps> = ({ activeTab, setActiveTab 
   return (
     <aside className="sidebar">
       <div className="brand">
-        <h1><ShieldAlert size={24} /> FLASHGUARD</h1>
-        <p>SIH26192 Prototype</p>
+        <h1><ShieldAlert size={24} /> JALRAKSHAK</h1>
+        <p> Flooding Prediction System</p>
       </div>
       <nav className="nav-links">
         {navItems.map((item) => (
