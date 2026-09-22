@@ -33,7 +33,7 @@ export const Registration: React.FC<RegistrationProps> = ({ onRegister, onNaviga
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <h1 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', color: 'var(--primary)', marginBottom: '0.5rem', fontSize: '1.5rem', fontWeight: 700 }}>
             <Activity size={24} />
-            FLASHGUARD
+            DHARARAKSHAK
           </h1>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>Create your account</p>
         </div>
@@ -43,12 +43,12 @@ export const Registration: React.FC<RegistrationProps> = ({ onRegister, onNaviga
             <label className="form-label">Full Name</label>
             <input type="text" className="form-control" name="fullName" value={formData.fullName} onChange={handleChange} required />
           </div>
-          
+
           <div className="form-group">
             <label className="form-label">Email Address</label>
             <input type="email" className="form-control" name="email" value={formData.email} onChange={handleChange} required />
           </div>
-          
+
           <div className="metrics-grid" style={{ gap: '1rem', marginBottom: '0' }}>
             <div className="form-group">
               <label className="form-label">Password</label>
@@ -59,12 +59,12 @@ export const Registration: React.FC<RegistrationProps> = ({ onRegister, onNaviga
               <input type="password" className="form-control" name="confirmPassword" value={formData.confirmPassword} onChange={handleChange} required />
             </div>
           </div>
-          
+
           <div className="form-group">
             <label className="form-label">Organization / Institution</label>
             <input type="text" className="form-control" name="organization" value={formData.organization} onChange={handleChange} required />
           </div>
-          
+
           <div className="form-group">
             <label className="form-label">Role</label>
             <select className="form-control" name="role" value={formData.role} onChange={handleChange} required>
