@@ -222,13 +222,13 @@ body {
   /* Existing desktop topbar */
 
   .topbar {
-    height: 56px;
-
-    padding: 0 1rem;
-
+    height: auto;
+    min-height: 56px;
+    padding: 0.5rem 1rem;
     margin: 0;
-
     width: 100%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 }
 @media (max-width: 768px) {
@@ -239,16 +239,36 @@ body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    padding: 1rem;
   }
 
   .metric-grid,
-  .metrics-grid {
+  .metrics-grid,
+  .dashboard-grid,
+  .analytics-grid {
     grid-template-columns: 1fr !important;
+    height: auto;
   }
 
   .card {
     width: 100%;
     max-width: 100%;
+    padding: 1rem;
+  }
+
+  .how-it-works-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .how-it-works-content {
+    padding: 0 1rem;
+  }
+
+  .data-table-container {
+    width: 100%;
+    overflow-x: auto;
   }
 }
 /* =========================

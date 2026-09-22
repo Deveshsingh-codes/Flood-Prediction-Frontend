@@ -68,7 +68,7 @@ export const Navigation: React.FC<NavigationProps> = ({
 
         <div className="mobile-brand">
           <ShieldAlert size={22} />
-          <span>JALRAKSHAK</span>
+          <span>DHARARAKSHAK</span>
         </div>
       </div>
 
@@ -82,14 +82,13 @@ export const Navigation: React.FC<NavigationProps> = ({
 
       {/* Sidebar */}
       <aside
-        className={`sidebar ${
-          isMobileMenuOpen ? 'sidebar-mobile-open' : ''
-        }`}
+        className={`sidebar ${isMobileMenuOpen ? 'sidebar-mobile-open' : ''
+          }`}
       >
         <div className="brand">
           <div className="brand-title">
             <ShieldAlert size={24} />
-            <h1>JALRAKSHAK</h1>
+            <h1>DHARARAKSHAK</h1>
 
             <button
               className="mobile-close-button"
@@ -107,9 +106,8 @@ export const Navigation: React.FC<NavigationProps> = ({
           {navItems.map((item) => (
             <button
               key={item.id}
-              className={`nav-item ${
-                activeTab === item.id ? 'active' : ''
-              }`}
+              className={`nav-item ${activeTab === item.id ? 'active' : ''
+                }`}
               onClick={() => handleNavigation(item.id)}
             >
               {item.icon}

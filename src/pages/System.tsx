@@ -55,33 +55,35 @@ export const System: React.FC = () => {
 
       <div className="card">
         <h3 className="card-title">IoT Sensor Network Status</h3>
-        <table className="data-table">
-          <thead>
-            <tr>
-              <th>Sensor ID</th>
-              <th>Type</th>
-              <th>Current Reading</th>
-              <th>Last Update</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {mockSensors.map(sensor => (
-              <tr key={sensor.id}>
-                <td style={{ fontWeight: 500 }}>{sensor.name}</td>
-                <td>{sensor.type}</td>
-                <td>{sensor.reading}</td>
-                <td>{sensor.lastUpdate}</td>
-                <td>
-                  <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <span className={`status-dot status-${sensor.status.toLowerCase()}`}></span>
-                    {sensor.status}
-                  </span>
-                </td>
+        <div className="data-table-container">
+          <table className="data-table">
+            <thead>
+              <tr>
+                <th>Sensor ID</th>
+                <th>Type</th>
+                <th>Current Reading</th>
+                <th>Last Update</th>
+                <th>Status</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {mockSensors.map(sensor => (
+                <tr key={sensor.id}>
+                  <td style={{ fontWeight: 500 }}>{sensor.name}</td>
+                  <td>{sensor.type}</td>
+                  <td>{sensor.reading}</td>
+                  <td>{sensor.lastUpdate}</td>
+                  <td>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                      <span className={`status-dot status-${sensor.status.toLowerCase()}`}></span>
+                      {sensor.status}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
